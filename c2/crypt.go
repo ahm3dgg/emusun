@@ -1,3 +1,5 @@
+// I am pretty sure that code was taken from https://go.dev/play/p/3wFl4lacjX
+
 package main
 
 import (
