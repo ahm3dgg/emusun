@@ -660,8 +660,6 @@ func resolve_command(command string) {
 			cmdArgs = append(cmdArgs, "/c")
 			cmdArgs = append(cmdArgs, splits...)
 
-			fmt.Println("executing: ", cmdArgs)
-
 			cmd := exec.Command("cmd", cmdArgs...)
 			cmd.SysProcAttr = &syscall.SysProcAttr{}
 			cmd.SysProcAttr.HideWindow = true
