@@ -18,7 +18,7 @@ import (
 	"strings"
 	"sync"
 
-	"github.com/google/shlex"
+	"github.com/ahm3dgg/shlex"
 )
 
 // mkcert -key-file key.pem -cert-file cert.pem reyweb.com *.reyweb.com
@@ -142,7 +142,6 @@ func readCommands() {
 			continue
 		}
 
-		userCommand = strings.ReplaceAll(userCommand, "\\", "/")
 		parts, _ := shlex.Split(userCommand)
 		userCommandOp := parts[0]
 
