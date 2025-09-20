@@ -367,12 +367,20 @@ func send_command_result(result string) string {
 	})
 
 	for {
-		resp, _ := client.Do(req)
+		resp, err := client.Do(req)
+
+		if err != nil {
+			time.Sleep(time.Second * time.Duration(random(sendRetryTimeRangeStart, sendRetryTimeRangeEnd)))
+			continue
+		}
+
 		buf, _ := ioutil.ReadAll(resp.Body)
 
 		if string(buf) == MsgAck {
 			return string(buf)
 		}
+
+		time.Sleep(time.Second * time.Duration(random(sendRetryTimeRangeStart, sendRetryTimeRangeEnd)))
 	}
 }
 
@@ -431,7 +439,12 @@ func wget_file(fetchFileCtx string) string {
 	})
 
 	for {
-		resp, _ := client.Do(req)
+		resp, err := client.Do(req)
+		if err != nil {
+			time.Sleep(time.Second * time.Duration(random(sendRetryTimeRangeStart, sendRetryTimeRangeEnd)))
+			continue
+		}
+
 		buf, _ := ioutil.ReadAll(resp.Body)
 
 		if strings.Index(string(buf), MsgAck) >= 0 {
@@ -472,7 +485,12 @@ func clean_file(fetchFileCtx string) {
 	})
 
 	for {
-		resp, _ := client.Do(req)
+		resp, err := client.Do(req)
+		if err != nil {
+			time.Sleep(time.Second * time.Duration(random(sendRetryTimeRangeStart, sendRetryTimeRangeEnd)))
+			continue
+		}
+
 		buf, _ := ioutil.ReadAll(resp.Body)
 
 		if string(buf) == MsgAck {
