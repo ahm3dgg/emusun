@@ -385,8 +385,6 @@ func send_command_result(result string) string {
 }
 
 func save_internal_settings() {
-	hashedTimeStamp = GetMD5Hash(time.Now().String())
-
 	sbeaconingRangeStart := strconv.FormatInt(int64(beaconingRangeStart), 10)
 	sbeaconingRangeEnd := strconv.FormatInt(int64(beaconingRangeEnd), 10)
 	sactivationTime := strconv.FormatInt(int64(activationTime), 10)
