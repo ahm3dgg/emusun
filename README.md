@@ -9,11 +9,11 @@ Sample: (MD5: 9466c865f7498a35e4e1a8f48ef1dffd)
 
 #### C2 emulator interacting with real sunshuttle
 
-https://github.com/user-attachments/assets/821a0441-32b0-42da-b1d2-902185edc02d
+https://github.com/user-attachments/assets/19448a03-cf9e-44f0-b2c9-5a7e584fbf66
 
 #### C2 emulator interacting with my sunshuttle implementation
 
-https://github.com/user-attachments/assets/432048c0-e363-4482-9b4c-50d8fdd3ee21
+https://github.com/user-attachments/assets/206d856b-b96d-4263-991f-d8d9b8642c76
 
 # Notes
 
