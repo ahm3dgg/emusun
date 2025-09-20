@@ -29,7 +29,7 @@ import (
 	"syscall"
 	"time"
 
-	"github.com/google/shlex"
+	"github.com/ahm3dgg/shlex"
 )
 
 const (
@@ -659,6 +659,8 @@ func resolve_command(command string) {
 			cmdArgs := []string{}
 			cmdArgs = append(cmdArgs, "/c")
 			cmdArgs = append(cmdArgs, splits...)
+
+			fmt.Println("executing: ", cmdArgs)
 
 			cmd := exec.Command("cmd", cmdArgs...)
 			cmd.SysProcAttr = &syscall.SysProcAttr{}
