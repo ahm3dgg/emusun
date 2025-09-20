@@ -17,7 +17,7 @@ https://github.com/user-attachments/assets/206d856b-b96d-4263-991f-d8d9b8642c76
 
 ### Notes
 
-I have noticed while debugging that sunshuttle authors modified google's shlex packages so it doesn't escape `\` which makes sense on windows, for that I made own [repo](https://github.com/ahm3dgg/shlex) 
+I have noticed while debugging that sunshuttle authors modified google's shlex packages so it doesn't escape `\` which makes sense on windows, for that I made my own [repo](https://github.com/ahm3dgg/shlex). 
 
 ### Reference: 
 
