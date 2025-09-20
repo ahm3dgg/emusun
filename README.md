@@ -15,11 +15,11 @@ https://github.com/user-attachments/assets/19448a03-cf9e-44f0-b2c9-5a7e584fbf66
 
 https://github.com/user-attachments/assets/206d856b-b96d-4263-991f-d8d9b8642c76
 
-# Notes
+#### Notes
 
 I have noticed while debugging that sunshuttle authors modified google's shlex packages so it doesn't escape `\` which makes sense on windows, for that I made own [repo](https://github.com/ahm3dgg/shlex) 
 
-Reference: 
+#### Reference: 
 
 - Got me started with Go reverse engineering highly recommended, he is also reversing sunshuttle but only made it to the key-exchange: [Reversing in action: Golang malware used in the SolarWinds attack](https://www.youtube.com/watch?v=_cL-OwU9pFQ)
 
